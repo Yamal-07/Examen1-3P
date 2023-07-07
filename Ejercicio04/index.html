@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BONO</title>
+</head>
+<body>
+    <script>
+        function calcularBonoNavidad(antiguedad, sueldo){
+            let bono = 0;
+            if (antiguedad > 4 || sueldo < 2000){
+                bono = sueldo * 0.25;
+            }else{
+                bono = sueldo * 0.20;
+            }
+            return bono;
+        }
+        const antiguedadEmpleado = parseInt(prompt("Ingrese la antiguedad del empleado en años: "));
+        const sueldoEmpleado = parseFloat(prompt("Ingrese el sueldo del empleado: "));
+        const bonoNavidad = calcularBonoNavidad(antiguedadEmpleado, sueldoEmpleado);
+        document.write(`El empleado resibira un bono navideño de ${bonoNavidad} bs`);
+
+    </script>
+</body>
+</html>
